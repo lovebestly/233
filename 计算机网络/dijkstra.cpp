@@ -33,7 +33,7 @@ void dijkstra(int v0, int n, bool s[maxn], int p[maxn], int dis[maxn], int w[max
 		}
 	}
 	printf("目的路由器 \t下一跳路由 \t  最短距离\n");
-	printf("袁道雄")；
+	printf("袁道雄");
 	for (i = 1; i <= n; i++) {
 		if (i == v0) continue;
 		j = i;
