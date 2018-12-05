@@ -15,7 +15,7 @@ int main(){
 	FILE *fp; //定义文件指针
 	/*creat(w, n, m);
 	dijkstra(1, n, s, p, dis, w);
-	if ((fp = fopen("E:\\计网\\data.txt", "w")) == NULL)
+	if ((fp = fopen("D:\\计网\\data.txt", "w")) == NULL)
 	{
 		printf("the file can not open..");
 		exit(0);
@@ -28,8 +28,8 @@ int main(){
 		}
 	}
 	fclose(fp);*/
-
-	if ((fp = fopen("E:\\计网\\data.txt", "r")) == NULL)
+	
+	if ((fp = fopen("D:\\计网\\data.txt", "r")) == NULL)
 	{
 		printf("the file can not open..");
 		exit(0);
