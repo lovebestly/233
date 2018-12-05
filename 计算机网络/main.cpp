@@ -5,15 +5,43 @@
 #include"addside.h"
 #include"deletever.h"
 #include"deleteside.h"
-int main()
-{
+int main(){
 	bool s[maxn];
 	int p[maxn];
 	int dis[maxn];
 	int w[maxn][maxn];
-	int n;
+	int n=9;
 	int m;
-	creat(w, n, m);
+	FILE *fp; //定义文件指针
+	/*creat(w, n, m);
+	dijkstra(1, n, s, p, dis, w);
+	if ((fp = fopen("E:\\计网\\data.txt", "w")) == NULL)
+	{
+		printf("the file can not open..");
+		exit(0);
+	}
+	for (int i = 0; i < maxn; i++)
+	{
+		for (int j = 0; j < maxn; j++)
+		{
+			fprintf(fp, "%d ", w[i][j]);
+		}
+	}
+	fclose(fp);*/
+
+	if ((fp = fopen("E:\\计网\\data.txt", "r")) == NULL)
+	{
+		printf("the file can not open..");
+		exit(0);
+	}//出错处理
+	for (int i = 0; i < maxn; i++)
+	{
+		for (int j = 0; j < maxn; j++)
+		{
+			fscanf_s(fp, "%d ", &w[i][j]);
+		}
+	}
+
 	int e = 0;
 	int x = 0;
 	while (1) {
@@ -36,7 +64,6 @@ int main()
 		case 5:;  addside(n, m, w);     break;
 		default: printf("输入指令有误，已为您返回上一级"); break;
 		}
-
 	}
 	return 0;
 }
