@@ -11,10 +11,9 @@ int main(){
 	int dis[maxn];
 	int w[maxn][maxn];
 	int n=9;
-	int m=16;
+	int m;
 	FILE *fp; //定义文件指针
-	/*
-	creat(w, n, m);
+	/*creat(w, n, m);
 	dijkstra(1, n, s, p, dis, w);
 	if ((fp = fopen("D:\\计网\\data.txt", "w")) == NULL)
 	{
@@ -29,7 +28,7 @@ int main(){
 		}
 	}
 	fclose(fp);*/
-
+	
 	if ((fp = fopen("D:\\计网\\data.txt", "r")) == NULL)
 	{
 		printf("the file can not open..");
@@ -42,6 +41,7 @@ int main(){
 			fscanf_s(fp, "%d ", &w[i][j]);
 		}
 	}
+
 	int e = 0;
 	int x = 0;
 	while (1) {
